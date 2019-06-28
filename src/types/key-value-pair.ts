@@ -1,0 +1,1 @@
+export type KeyValuePair<T,K> = { key: T, value: K };

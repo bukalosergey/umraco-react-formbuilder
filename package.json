@@ -1,0 +1,70 @@
+{
+    "name": "webtf.cms.ui",
+    "version": "1.0.0",
+    "description": "the webtf ui",
+    "main": "./src/app.ts",
+    "scripts": {
+        "test": "jest",
+        "start:dev": "webpack-dev-server --mode=development",
+        "build:prod": "webpack --mode=production"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    },
+    "keywords": [],
+    "author": "d8",
+    "license": "ISC",
+    "dependencies": {
+        "iban": "0.0.12",
+        "libphonenumber-js": "^1.7.18",
+        "react": "^16.7.0",
+        "react-date-picker": "^7.5.0",
+        "react-dom": "^16.7.0",
+        "react-switch": "^5.0.0"
+    },
+    "devDependencies": {
+        "@types/core-js": "^2.5.0",
+        "@types/iban": "0.0.30",
+        "@types/jest": "^23.3.13",
+        "@types/jquery": "^3.3.29",
+        "@types/node": "^10.12.18",
+        "@types/react": "^16.7.20",
+        "@types/react-dom": "^16.0.11",
+        "babel-polyfill": "^6.26.0",
+        "bootstrap": "^4.2.1",
+        "compression-webpack-plugin": "^2.0.0",
+        "copy-webpack-plugin": "^4.6.0",
+        "css-loader": "^1.0.1",
+        "eslint": "^5.12.1",
+        "eslint-plugin-typescript": "^0.14.0",
+        "html-webpack-plugin": "^3.2.0",
+        "jest": "^24.8.0",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.6",
+        "source-map-loader": "^0.2.4",
+        "style-loader": "^0.22.1",
+        "ts-jest": "^24.0.2",
+        "ts-loader": "^4.5.0",
+        "tslint": "^5.12.1",
+        "tslint-react": "^3.6.0",
+        "typescript": "^3.2.4",
+        "typescript-eslint-parser": "^22.0.0",
+        "webpack": "^4.29.0",
+        "webpack-cli": "^3.2.1",
+        "webpack-dev-middleware": "^3.5.1",
+        "webpack-dev-server": "^3.1.14",
+        "webpack-hot-middleware": "^2.24.3",
+        "whatwg-fetch": "^2.0.4"
+    }
+}

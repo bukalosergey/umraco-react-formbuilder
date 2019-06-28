@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "typescript-eslint-parser",
+    "plugins": [
+        "typescript"
+    ],
+    "rules": {
+        "indent": [2, 1]
+    }
+}

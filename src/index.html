@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React with Typescript</title>
+    <style>
+        a {
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" data-form-name="deposit-form" onclick="onFormChange(event)">Deposit Form </a>
+            <a href="#" data-form-name="loan-form" onclick="onFormChange(event)">Loan Form </a>
+            <a href="#" data-form-name="emerchant-form" onclick="onFormChange(event)">Emerchant Form </a>
+            <a href="#" data-form-name="contact-form" onclick="onFormChange(event)">Contact Form </a>
+        </nav>
+    </header>
+    <div id="calculator"></div>
+    <div umbraco-form="deposit-form" style="display: block;">
+        <div></div>
+    </div>
+    <div umbraco-form="loan-form" style="display: none;">
+        <div></div>
+    </div>
+    <div umbraco-form="emerchant-form" style="display: none;">
+        <div></div>
+    </div>
+    <div umbraco-form="contact-form" style="display: none;">
+        <div></div>
+    </div>
+    <script>
+        function onFormChange(e) {
+
+            e.preventDefault();
+
+            var previous = document.querySelector("[data-active='true']");
+
+            if (previous) {
+                previous.style.color = '';
+                previous.style.background = '';
+                previous.dataset.active = false;
+            }
+
+            var formName = e.target.dataset.formName;
+            var activeNav = document.querySelector("[data-form-name='" + formName + "']");
+            activeNav.style.color = 'red';
+            activeNav.style.background = 'bisque';
+            activeNav.dataset.active = true;
+
+
+            document.querySelector("[style='display: block;']").style.display = "none";
+            document.querySelector("[umbraco-form='" + formName + "']").style.display = "block";
+        }
+    </script>
+</body>
+</html>

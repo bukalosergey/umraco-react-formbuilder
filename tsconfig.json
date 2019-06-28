@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "declaration": false,
+        "module": "esnext",
+        "noImplicitAny": true,
+        "outDir": "dist",
+        "preserveConstEnums": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "downlevelIteration": true,
+        "lib": [ "dom", "es2018" ]
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}

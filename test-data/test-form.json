@@ -1,0 +1,404 @@
+{
+    "formName": "Deposit",
+    "controls": [
+        {
+            "fieldSetName": "PERSÖNLICHE DATEN",
+            "controls": [
+                {
+                    "options": [
+                        "1",
+                        "2"
+                    ],
+                    "controlName": "gender",
+                    "type": "radio",
+                    "required": false,
+                    "defaultValue": "1",
+                    "label": "ANREDE",
+                    "description": "some description",
+                    "validationMessage": "some invalida text",
+                    "conditionRules": [
+                        {
+                            "action": "hide",
+                            "when": "all",
+                            "items": [
+                                {
+                                    "field": "firstname",
+                                    "rule": "equal",
+                                    "value": "test"
+                                },
+                                {
+                                    "field": "lastname",
+                                    "rule": "equal",
+                                    "value": "test"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "firstname",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "VORNAME"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "lastname___",
+                    "type": "inputWithOptions",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "OMNIVA"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "lastname",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "NACHNAME"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "homephone",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "FESTNETZ"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "mobilephone",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "MOBILEFUNKNUMMER"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "email",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "E-MAIL ADRESSE"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "emailRepeat",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "WIEDERHOLEN E-MAIL"
+                }
+            ]
+        },
+        {
+            "fieldSetName": "ADRESSE",
+            "controls": [
+                {
+                    "placeholder": "",
+                    "controlName": "MainApplicantAddress",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "STRASSE UND HAUSNR."
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "postalcode",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "PLZ"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "city",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "STADT"
+                },
+                {
+                    "dictionary": "Countries",
+                    "controlName": "country",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "DE",
+                    "label": "LAND"
+                }
+            ]
+        },
+        {
+            "fieldSetName": "ANDERE PERSÖNLICHE DATEN",
+            "controls": [
+                {
+                    "placeholder": "",
+                    "controlName": "dateOfBirth",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "GEBURTSDATUM"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "cityOfBirth",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "GEBURTSORT"
+                },
+                {
+                    "buttonText": "Button text",
+                    "allowedFileTypes": ".pdf",
+                    "multiple": false,
+                    "requiredMessage": "",
+                    "fileExtensionMessage": "",
+                    "controlName": "documentUpload",
+                    "type": "documentUpload",
+                    "label": "Document upload",
+                    "description": ""
+                },
+                {
+                    "dictionary": "Countries",
+                    "controlName": "countryOfBirth",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "GEBURTSLAND"
+                },
+                {
+                    "dictionary": "Countries",
+                    "controlName": "citizenship",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "STAATSANGEHOERIGKEIT"
+                },
+                {
+                    "dictionary": "OccupationTypes",
+                    "controlName": "occupationType",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "BERUF"
+                },
+                {
+                    "dictionary": "IncomeAmount",
+                    "controlName": "income",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Jährliches Einkommen vor Steuern"
+                },
+                {
+                    "dictionary": "TaxResident",
+                    "controlName": "isTaxResident",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Sind Sie in Deutschland steueransässig?"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "TIN",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "STEUER-ID"
+                },
+                {
+                    "dictionary": "FACTA",
+                    "controlName": "isSubjectToFacta",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Unterliegen Sie FACTA?"
+                }
+            ]
+        },
+        {
+            "fieldSetName": "ÜBER EINSPARUNGEN",
+            "controls": [
+                {
+                    "dictionary": "DepositPurpose",
+                    "controlName": "purpose",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Was ist das Hauptverwendungszweck Ihrer Einlage?"
+                },
+                {
+                    "dictionary": "MoneySource",
+                    "controlName": "moneySource",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Was ist der Ursprung Ihrer Geldanlage?"
+                },
+                {
+                    "dictionary": "DepositOwner",
+                    "controlName": "depositOwner",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Deposit owner"
+                },
+                {
+                    "dictionary": "ExpectedDeposits",
+                    "controlName": "expectedDeposits",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Wie oft planen Sie, Einzahlungen zu tätigen?"
+                },
+                {
+                    "dictionary": "ExpectedDepositAmount",
+                    "controlName": "expectedDepositsAmount",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Wie hoch ist der geschätzte Betrag jeder Einzahlung?"
+                },
+                {
+                    "dictionary": "ExpectedWithdrawals",
+                    "controlName": "expectedWithdrawals",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "                Wie oft planen Sie, Abhebungen zu tätigen?"
+                },
+                {
+                    "dictionary": "ExpectedWithdrawalAmount",
+                    "controlName": "expectedWithdrawalAmount",
+                    "type": "dropdown",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Wie hoch ist der geschätzte Betrag jeder Abhebung?"
+                }
+            ]
+        },
+        {
+            "fieldSetName": "BEZUGSKONTO FÜR IHRE EINZAHLUNGEN UND ABHEBUNGEN",
+            "controls": [
+                {
+                    "placeholder": "",
+                    "controlName": "IBAN",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "IBAN"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "BIC",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "BIC"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "bank",
+                    "type": "text",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "BANK"
+                }
+            ]
+        },
+        {
+            "fieldSetName": "",
+            "controls": [
+                {
+                    "options": [
+                        "false",
+                        "true"
+                    ],
+                    "controlName": "isPep",
+                    "type": "radio",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "SIND SIE EINE POLITISCH EXPONIERTE PERSON (PEP)?"
+                },
+                {
+                    "options": [
+                        "false",
+                        "true"
+                    ],
+                    "controlName": "pepRelated",
+                    "type": "radio",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "SIND SIE FAMILIENMITGLIED ODER ANGESTELLTER EINER PEP?"
+                }
+            ]
+        },
+        {
+            "fieldSetName": "ANDERE",
+            "controls": [
+                {
+                    "placeholder": "",
+                    "controlName": "allowMarketing",
+                    "type": "checkbox",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "Allow marketing"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "acceptConditions",
+                    "type": "checkbox",
+                    "required": false,
+                    "defaultValue": "",
+                    "label": "ICH AKZEPTIERE DIE ALLGEMEINEN VERTRAGSBEDINGUNGEN DES TF BANK TAGESGELDKONTOS"
+                }
+            ]
+        },
+        {
+            "controls": [
+                {
+                    "placeholder": "",
+                    "controlName": "name",
+                    "type": "text",
+                    "required": true,
+                    "defaultValue": "",
+                    "label": "Name"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "email",
+                    "type": "email",
+                    "required": true,
+                    "defaultValue": "",
+                    "label": "Email"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "phone",
+                    "type": "text",
+                    "required": true,
+                    "defaultValue": "",
+                    "label": "Phone"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "message",
+                    "type": "text",
+                    "required": true,
+                    "defaultValue": "",
+                    "label": "Message"
+                },
+                {
+                    "placeholder": "",
+                    "controlName": "subject",
+                    "type": "text",
+                    "required": true,
+                    "defaultValue": "",
+                    "label": "Subject"
+                }
+            ]
+        }
+    ]
+}

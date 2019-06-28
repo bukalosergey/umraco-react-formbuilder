@@ -1,0 +1,13 @@
+/node_modules
+/dist
+/.vscode
+/src/public/Content
+
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
